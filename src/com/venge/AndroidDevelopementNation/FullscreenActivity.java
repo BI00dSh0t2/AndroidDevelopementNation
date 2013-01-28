@@ -59,7 +59,7 @@ public class FullscreenActivity extends SlidingFragmentActivity {
         final View contentView = findViewById(R.id.fullscreen_content);
         
         
-        //More Sliding Menu Stuff
+        //Sliding Menu Stuff
         SlidingMenu menu = getSlidingMenu();
         menu.setBehindOffsetRes(R.dimen.slideout);
         menu.setBackgroundColor(Color.BLACK);
