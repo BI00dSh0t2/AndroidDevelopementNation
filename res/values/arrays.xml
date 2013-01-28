@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="areas">
+        <item >Dev Area</item>
+        <item >Dev Talk</item>
+        <item >about us</item>
+        <item >settings</item>
+    </string-array>
+    
+</resources>
