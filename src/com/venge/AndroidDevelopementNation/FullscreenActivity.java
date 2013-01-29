@@ -16,7 +16,7 @@ import android.view.View;
 
 
 
-public class FullscreenActivity extends SlidingFragmentActivity {
+public class FullscreenActivity extends SlidingFragmentActivity implements OnItemClickListener {
 
     private static final boolean AUTO_HIDE = true;
     private static final int AUTO_HIDE_DELAY_MILLIS = 3000;
@@ -24,6 +24,8 @@ public class FullscreenActivity extends SlidingFragmentActivity {
 
 
     private SystemUiHider mSystemUiHider;
+    
+    public ListView lv = (ListView) findViewById(R.id.sliding_menu);
 
 
     @Override
@@ -37,15 +39,16 @@ public class FullscreenActivity extends SlidingFragmentActivity {
         final View contentView = findViewById(R.id.fullscreen_content);
         
         
-        //Sliding Menu Stuff
+        //Sliding Menu Customizations
         SlidingMenu menu = getSlidingMenu();
         menu.setBehindOffsetRes(R.dimen.slideout);
         menu.setBackgroundColor(Color.BLACK);
         menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
         menu.setFadeEnabled(true);
         menu.setFadeDegree(0.5f);
-        menu.setBehindCanvasTransformer(transformCanvas);
         
+        //Setup shop for navigation menu
+        lv.setOnItemClickListener(this);
 		
         
         // Set up an instance of SystemUiHider to control the system UI for
@@ -90,6 +93,21 @@ public class FullscreenActivity extends SlidingFragmentActivity {
                     }
                 });
     }
+    	@Override
+    	public void onListItemClick(ListView parent, View view, int position, long id) {
+    		if (position == 0) {
+    			//devarea
+    		}
+    		if (position == 1){
+    			//devtalk
+    		}
+    		if (position == 2) {
+    			//about
+    		}
+    		if (position == 3) {
+    			//settings
+    		}
+	}
 
     
 	public void transformCanvas(Canvas canvas, float percentOpen) {
