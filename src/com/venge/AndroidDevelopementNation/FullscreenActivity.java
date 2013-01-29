@@ -1,6 +1,5 @@
 package com.venge.AndroidDevelopementNation;
 
-import com.slidingmenu.lib.SlidingMenu.CanvasTransformer;
 import com.slidingmenu.lib.SlidingMenu;
 import com.slidingmenu.lib.app.SlidingFragmentActivity;
 import com.venge.AndroidDevelopementNation.util.SystemUiHider;
@@ -15,17 +14,11 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.AdapterView;
-import android.widget.*;
 
 
 
 public class FullscreenActivity extends SlidingFragmentActivity implements AdapterView.OnItemClickListener
 {
-
-	public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4)
-	{
-		// TODO: Implement this method
-	}
 
     private static final boolean AUTO_HIDE = true;
     private static final int AUTO_HIDE_DELAY_MILLIS = 3000;
@@ -101,22 +94,22 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
                     }
                 });
     }
-    	@Override
-    	public void onListItemClick(ListView parent, View view, int position, long id) {
-    		if (position == 0) {
-    			//devarea
-    		}
-    		else if (position == 1){
-    			//devtalk
-    		}
-    		else if (position == 2) {
-    			//about
-    		}
-    		else if (position == 3) {
-    			//settings
-    		}
+    
+	public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4)
+	{
+		if (p3 == 0) {
+			//devarea
+		}
+		else if (p3 == 1){
+			//devtalk
+		}
+		else if (p3 == 2) {
+			//about
+		}
+		else if (p3 == 3) {
+			//settings
+		}
 	}
-
     
 	public void transformCanvas(Canvas canvas, float percentOpen) {
 		float scale = (float) (percentOpen*0.25 + 0.75);
