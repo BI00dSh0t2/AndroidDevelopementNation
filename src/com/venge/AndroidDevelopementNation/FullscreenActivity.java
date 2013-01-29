@@ -98,13 +98,13 @@ public class FullscreenActivity extends SlidingFragmentActivity implements OnIte
     		if (position == 0) {
     			//devarea
     		}
-    		if (position == 1){
+    		else if (position == 1){
     			//devtalk
     		}
-    		if (position == 2) {
+    		else if (position == 2) {
     			//about
     		}
-    		if (position == 3) {
+    		else if (position == 3) {
     			//settings
     		}
 	}
