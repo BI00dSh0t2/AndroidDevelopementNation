@@ -13,10 +13,19 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ListView;
+import android.widget.AdapterView;
+import android.widget.*;
 
 
 
-public class FullscreenActivity extends SlidingFragmentActivity implements OnItemClickListener {
+public class FullscreenActivity extends SlidingFragmentActivity implements AdapterView.OnItemClickListener
+{
+
+	public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4)
+	{
+		// TODO: Implement this method
+	}
 
     private static final boolean AUTO_HIDE = true;
     private static final int AUTO_HIDE_DELAY_MILLIS = 3000;
@@ -49,7 +58,6 @@ public class FullscreenActivity extends SlidingFragmentActivity implements OnIte
         
         //Setup shop for navigation menu
         lv.setOnItemClickListener(this);
-		
         
         // Set up an instance of SystemUiHider to control the system UI for
         // this activity.
@@ -120,20 +128,9 @@ public class FullscreenActivity extends SlidingFragmentActivity implements OnIte
 	@Override
 	public void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-
-        // Trigger the initial hide() shortly after the activity has been
-        // created, to briefly hint to the user that UI controls
-        // are available.
         delayedHide(100);
     }
     
-
-
-    /**
-     * Touch listener to use for in-layout UI controls to delay hiding the
-     * system UI. This is to prevent the jarring behavior of controls going away
-     * while interacting with activity UI.
-     */
     View.OnTouchListener mDelayHideTouchListener = new View.OnTouchListener() {
         @Override
         public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -152,10 +149,7 @@ public class FullscreenActivity extends SlidingFragmentActivity implements OnIte
         }
     };
 
-    /**
-     * Schedules a call to hide() in [delay] milliseconds, canceling any
-     * previously scheduled calls.
-     */
+
     private void delayedHide(int delayMillis) {
         mHideHandler.removeCallbacks(mHideRunnable);
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
