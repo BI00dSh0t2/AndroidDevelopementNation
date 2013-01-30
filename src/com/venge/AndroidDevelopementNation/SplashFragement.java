@@ -20,7 +20,6 @@ public class SplashFragement extends Fragment {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
-	
 	    // TODO Auto-generated method stub
 	}
 
