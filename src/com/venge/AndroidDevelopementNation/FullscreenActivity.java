@@ -2,18 +2,10 @@ package com.venge.AndroidDevelopementNation;
 
 import com.slidingmenu.lib.SlidingMenu;
 import com.slidingmenu.lib.app.SlidingFragmentActivity;
-import com.venge.AndroidDevelopementNation.util.SystemUiHider;
-
-import android.annotation.TargetApi;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.AdapterView;
@@ -26,6 +18,7 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //set layout to empty fragment container
         setContentView(R.layout.fragmentcontainer);
         setBehindContentView(R.layout.slidingmenu);
         
@@ -39,12 +32,14 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
         menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
         menu.setFadeEnabled(true);
         menu.setFadeDegree(0.5f);
+        setSlidingActionBarEnabled(false);
+
         
+        //Setup shop for navigation Menu
         lv.setOnItemClickListener(this);
         
-        
+        //Set Content View to splash screen
         SplashFragement splash = new SplashFragement();
-        
         FragmentTransaction fg = getSupportFragmentManager().beginTransaction();
         fg.replace(R.id.container, splash);
         fg.addToBackStack(null);

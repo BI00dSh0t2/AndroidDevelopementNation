@@ -21,7 +21,7 @@
         android:gravity="center"
         android:keepScreenOn="true"
         android:text="AndroidDevNation"
-        android:textColor="#33b5e5"
+        android:textColor="#33b1e5"
         android:textSize="50sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
@@ -34,6 +34,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/black_overlay"
         android:fitsSystemWindows="true" >
 
         <LinearLayout
@@ -41,15 +42,24 @@
             style="?buttonBarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
             android:background="@color/black_overlay"
             android:orientation="horizontal"
             tools:ignore="UselessParent" >
 
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.32"
+                android:text="Refresh " />
 
-
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.48"
+                android:text="Menu" />
         </LinearLayout>
-        
     </FrameLayout>
 
 </FrameLayout>

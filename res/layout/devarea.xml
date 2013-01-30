@@ -8,7 +8,17 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dev Area Goes here"
+        android:text="Dev Area"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:text="Coming Soon" >
+
+        <requestFocus />
+    </EditText>
 
 </LinearLayout>
