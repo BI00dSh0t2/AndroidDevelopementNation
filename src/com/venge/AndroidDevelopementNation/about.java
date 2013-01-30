@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.graphics.Color;
 import android.os.Bundle;
 
 public class about extends Fragment {
@@ -13,6 +14,7 @@ public class about extends Fragment {
 	      Bundle savedInstanceState) {
 	    View view = inflater.inflate(R.layout.about,
 	        container, false);
+	    view.setBackgroundColor(Color.DKGRAY);
 		return view;
 	}
 

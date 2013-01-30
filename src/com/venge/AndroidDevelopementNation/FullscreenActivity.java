@@ -21,7 +21,6 @@ import android.widget.AdapterView;
 
 public class FullscreenActivity extends SlidingFragmentActivity implements AdapterView.OnItemClickListener
 {
-	ListView lv = (ListView) findViewById(R.id.sliding_menu);
 
     @Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -31,7 +30,7 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
         setBehindContentView(R.layout.slidingmenu);
         
 
-        
+        ListView lv = (ListView) findViewById(R.id.sliding_menu);
         
         //Sliding Menu Customizations
         SlidingMenu menu = getSlidingMenu();
@@ -41,10 +40,10 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
         menu.setFadeEnabled(true);
         menu.setFadeDegree(0.5f);
         
-        //Setup shop for navigation menu
         lv.setOnItemClickListener(this);
         
-        Fragment splash = new SplashFragement();
+        
+        SplashFragement splash = new SplashFragement();
         
         FragmentTransaction fg = getSupportFragmentManager().beginTransaction();
         fg.replace(R.id.container, splash);
@@ -57,9 +56,10 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
 	public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4)
 	{
 		FragmentTransaction fg = getSupportFragmentManager().beginTransaction();
+		SlidingMenu menu = getSlidingMenu();
 		if (p3 == 0) {
 			//devarea
-			Fragment devarea = new devarea();
+			devarea devarea = new devarea();
 			fg.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
 			fg.replace(R.id.container, devarea);
 			fg.addToBackStack(null);
@@ -67,13 +67,29 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
 		}
 		else if (p3 == 1){
 			//devtalk
+			devtalk devtalk = new devtalk();
+			fg.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+			fg.replace(R.id.container, devtalk);
+			fg.addToBackStack(null);
+			fg.commit();
 		}
 		else if (p3 == 2) {
 			//about
+			about about = new about();
+			fg.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+			fg.replace(R.id.container, about);
+			fg.addToBackStack(null);
+			fg.commit();
 		}
 		else if (p3 == 3) {
 			//settings
+			settings settings = new settings();
+			fg.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+			fg.replace(R.id.container, settings);
+			fg.addToBackStack(null);
+			fg.commit();
 		}
+		menu.showContent();
 	}
     
 	public void transformCanvas(Canvas canvas, float percentOpen) {
