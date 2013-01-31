@@ -1044,6 +1044,7 @@ containing a value of this type.
         public static final int ic_launcher=0x7f02006f;
     }
     public static final class id {
+        public static final int LinearLayout1=0x7f040047;
         public static final int abs__action_bar=0x7f040028;
         public static final int abs__action_bar_container=0x7f040027;
         public static final int abs__action_bar_subtitle=0x7f040017;
@@ -1084,8 +1085,6 @@ containing a value of this type.
         public static final int abs__title=0x7f040021;
         public static final int abs__titleDivider=0x7f040022;
         public static final int abs__up=0x7f04000b;
-        public static final int button1=0x7f040049;
-        public static final int button3=0x7f04004a;
         public static final int container=0x7f04003a;
         public static final int disableHome=0x7f040009;
         public static final int editText1=0x7f040039;
@@ -1095,15 +1094,17 @@ containing a value of this type.
         public static final int editText5=0x7f040044;
         public static final int edit_query=0x7f04002d;
         public static final int fullscreen=0x7f040013;
-        public static final int fullscreen_content=0x7f040047;
-        public static final int fullscreen_content_controls=0x7f040048;
+        public static final int fullscreen_content=0x7f040048;
         public static final int homeAsUp=0x7f040006;
         public static final int left=0x7f040010;
         public static final int listMode=0x7f040002;
         public static final int margin=0x7f040012;
+        public static final int menu=0x7f04004a;
         public static final int normal=0x7f040001;
+        public static final int refresh=0x7f040049;
         public static final int right=0x7f040011;
         public static final int selected_view=0x7f040014;
+        public static final int settings=0x7f04004b;
         public static final int showCustom=0x7f040008;
         public static final int showHome=0x7f040005;
         public static final int showTitle=0x7f040007;
@@ -1158,6 +1159,9 @@ containing a value of this type.
         public static final int slidingmenu=0x7f03001f;
         public static final int slidingmenumain=0x7f030020;
         public static final int splash=0x7f030021;
+    }
+    public static final class menu {
+        public static final int abs_menu=0x7f0c0000;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 

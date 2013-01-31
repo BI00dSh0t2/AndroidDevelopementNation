@@ -1,5 +1,9 @@
 package com.venge.AndroidDevelopementNation;
 
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
 import com.slidingmenu.lib.SlidingMenu;
 import com.slidingmenu.lib.app.SlidingFragmentActivity;
 import android.graphics.Canvas;
@@ -18,6 +22,7 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        
         //set layout to empty fragment container
         setContentView(R.layout.fragmentcontainer);
         setBehindContentView(R.layout.slidingmenu);
@@ -33,7 +38,12 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
         menu.setFadeEnabled(true);
         menu.setFadeDegree(0.5f);
         setSlidingActionBarEnabled(false);
-
+        
+        //Customize the actionbar
+        ActionBar abs = getSupportActionBar();
+        abs.setDisplayShowHomeEnabled(true);
+        abs.setHomeButtonEnabled(true);
+        abs.setTitle("Dev Nation");
         
         //Setup shop for navigation Menu
         lv.setOnItemClickListener(this);
@@ -48,6 +58,14 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
 
     }
     
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getSupportMenuInflater();
+        inflater.inflate(R.menu.abs_menu, menu);
+        return true;
+    }
+    
+    //On Slide Menu Click
 	public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4)
 	{
 		FragmentTransaction fg = getSupportFragmentManager().beginTransaction();
@@ -55,7 +73,7 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
 		if (p3 == 0) {
 			//devarea
 			devarea devarea = new devarea();
-			fg.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+			fg.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
 			fg.replace(R.id.container, devarea);
 			fg.addToBackStack(null);
 			fg.commit();
@@ -63,7 +81,7 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
 		else if (p3 == 1){
 			//devtalk
 			devtalk devtalk = new devtalk();
-			fg.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+			fg.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
 			fg.replace(R.id.container, devtalk);
 			fg.addToBackStack(null);
 			fg.commit();
@@ -71,21 +89,44 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
 		else if (p3 == 2) {
 			//about
 			about about = new about();
-			fg.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+			fg.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
 			fg.replace(R.id.container, about);
-			fg.addToBackStack(null);
-			fg.commit();
-		}
-		else if (p3 == 3) {
-			//settings
-			settings settings = new settings();
-			fg.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-			fg.replace(R.id.container, settings);
 			fg.addToBackStack(null);
 			fg.commit();
 		}
 		menu.showContent();
 	}
+	
+	
+	@Override
+	public boolean onMenuItemSelected(int featureId, MenuItem item) {
+
+	    int itemId = item.getItemId();
+	    switch (itemId) {
+	    
+	    //On Actionbar Home Button Click
+	    case android.R.id.home:
+	        toggle();
+	        
+	        SplashFragement splash = new SplashFragement();
+	        FragmentTransaction fg = getSupportFragmentManager().beginTransaction();
+	        fg.replace(R.id.container, splash);
+	        fg.commit();
+	        
+	        //Close Sliding Menu
+	        SlidingMenu menu = getSlidingMenu();
+	        menu.showContent();
+	        
+	        //Delete Back Stack
+	        getSupportFragmentManager().popBackStackImmediate();
+	        
+	        break;
+
+	    }
+
+	    return true;
+	}
+	
     
 	public void transformCanvas(Canvas canvas, float percentOpen) {
 		float scale = (float) (percentOpen*0.25 + 0.75);
