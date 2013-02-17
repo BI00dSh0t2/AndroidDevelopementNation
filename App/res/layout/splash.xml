@@ -12,7 +12,7 @@
     <TextView
         android:id="@+id/fullscreen_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="244dp"
         android:gravity="center"
         android:keepScreenOn="true"
         android:text="AndroidDevNation"
@@ -20,5 +20,23 @@
         android:textSize="50sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
+
+    <SearchView
+        android:id="@+id/searchView1"
+        android:layout_width="476dp"
+        android:layout_height="wrap_content" >
+    </SearchView>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="162dp"
+        android:layout_height="wrap_content"
+        android:layerType="software"
+        android:text="Button" />
+
+    <WebView
+        android:id="@+id/webView1"
+        android:layout_width="465dp"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

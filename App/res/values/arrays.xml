@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="areas">
+         <item >Home</item>
         <item >Dev Area</item>
         <item >Dev Talk</item>
-        <item >about us</item>
+        <item >About Us</item>
+        <item >Help Center</item>
+        <item >Settings</item>
     </string-array>
     
 </resources>

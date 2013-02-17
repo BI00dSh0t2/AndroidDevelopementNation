@@ -12,21 +12,6 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ToggleButton
-        android:id="@+id/toggleButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ToggleButton" />
-
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10" >
-
-        <requestFocus />
-    </EditText>
-
-    <ToggleButton
         android:id="@+id/toggleButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,7 +21,8 @@
         android:id="@+id/editText2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10" />
+        android:ems="10"
+        android:text="Coming Soon" />
 
     <ToggleButton
         android:id="@+id/toggleButton3"
@@ -48,7 +34,8 @@
         android:id="@+id/editText3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10" />
+        android:ems="10"
+        android:text="Coming Soon" />
 
     <ToggleButton
         android:id="@+id/toggleButton4"
@@ -60,7 +47,8 @@
         android:id="@+id/editText4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10" />
+        android:ems="10"
+        android:text="Phone LED (Incoming Notifications)" />
 
     <ToggleButton
         android:id="@+id/toggleButton5"
@@ -72,6 +60,14 @@
         android:id="@+id/editText5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10" />
+        android:ems="10"
+        android:text="Push Notifications" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="50dip"
+        android:text="Back" />
 
 </LinearLayout>

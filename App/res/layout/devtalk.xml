@@ -16,9 +16,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:text="Coming Soon" >
+        android:text=" Dev Talk Chat is for devs interested in communicating with other developers on projects in a social environment." >
 
-        <requestFocus />
+        <requestFocus android:layout_width="wrap_content" />
+
     </EditText>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back" />
 
 </LinearLayout>

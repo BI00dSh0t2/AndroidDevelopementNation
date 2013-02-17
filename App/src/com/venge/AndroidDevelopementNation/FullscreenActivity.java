@@ -9,6 +9,7 @@ import com.slidingmenu.lib.app.SlidingFragmentActivity;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.ListView;
@@ -18,7 +19,11 @@ import android.widget.AdapterView;
 public class FullscreenActivity extends SlidingFragmentActivity implements AdapterView.OnItemClickListener
 {
 
-    @Override
+    private FragmentTransaction setTransition;
+	private AdapterView<?> p1;
+
+
+	@Override
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -43,13 +48,13 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
         ActionBar abs = getSupportActionBar();
         abs.setDisplayShowHomeEnabled(true);
         abs.setHomeButtonEnabled(true);
-        abs.setTitle("Dev Nation");
+        abs.setTitle("DevNation");
         
         //Setup shop for navigation Menu
         lv.setOnItemClickListener(this);
         
         //Set Content View to splash screen
-        SplashFragement splash = new SplashFragement();
+        SplashFragment splash = new SplashFragment();
         FragmentTransaction fg = getSupportFragmentManager().beginTransaction();
         fg.replace(R.id.container, splash);
         fg.addToBackStack(null);
@@ -68,9 +73,18 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
     //On Slide Menu Click
 	public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4)
 	{
+		this.p1 = p1;
 		FragmentTransaction fg = getSupportFragmentManager().beginTransaction();
 		SlidingMenu menu = getSlidingMenu();
 		if (p3 == 0) {
+			//splash
+			SplashFragment splash = new SplashFragment();
+			fg.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+			fg.replace(R.id.container, splash);
+			fg.addToBackStack(null);
+			fg.commit();
+		}
+		else if (p3 == 1){
 			//devarea
 			devarea devarea = new devarea();
 			fg.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
@@ -78,7 +92,7 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
 			fg.addToBackStack(null);
 			fg.commit();
 		}
-		else if (p3 == 1){
+		else if (p3 == 2) {
 			//devtalk
 			devtalk devtalk = new devtalk();
 			fg.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
@@ -86,11 +100,27 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
 			fg.addToBackStack(null);
 			fg.commit();
 		}
-		else if (p3 == 2) {
+		else if (p3 == 3) {
 			//about
 			about about = new about();
 			fg.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-			fg.replace(R.id.container, about);
+			fg.replace(R.id.container,about);
+			fg.addToBackStack(null);
+			fg.commit();
+		}
+		else if (p3 == 4) {
+			//helpcenter 
+		    Fragment helpcenter = new helpcenter();
+			fg.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+			fg.replace(R.id.container,helpcenter); 
+			fg.addToBackStack(null);
+			fg.commit();
+		}
+		else if (p4 == 5) {
+			//settings 
+			settings settings = new settings();
+			fg.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN); 
+			fg.replace(R.id.container,settings); 
 			fg.addToBackStack(null);
 			fg.commit();
 		}
@@ -108,7 +138,7 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
 	    case android.R.id.home:
 	        toggle();
 	        
-	        SplashFragement splash = new SplashFragement();
+	        SplashFragment splash = new SplashFragment();
 	        FragmentTransaction fg = getSupportFragmentManager().beginTransaction();
 	        fg.replace(R.id.container, splash);
 	        fg.commit();
