@@ -21,11 +21,6 @@
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
 
-    <SearchView
-        android:id="@+id/searchView1"
-        android:layout_width="476dp"
-        android:layout_height="wrap_content" >
-    </SearchView>
 
     <Button
         android:id="@+id/button1"

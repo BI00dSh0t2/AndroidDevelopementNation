@@ -44,6 +44,7 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
         menu.setFadeDegree(0.5f);
         setSlidingActionBarEnabled(false);
         
+        
         //Customize the actionbar
         ActionBar abs = getSupportActionBar();
         abs.setDisplayShowHomeEnabled(true);
