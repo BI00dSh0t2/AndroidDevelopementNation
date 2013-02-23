@@ -10,6 +10,7 @@ package com.venge.AndroidDevelopementNation;
 public final class R {
     public static final class array {
         public static final int areas=0x7f0b0000;
+        public static final int secondary_menu=0x7f0b0001;
     }
     public static final class attr {
         /**  Custom divider drawable to use for elements in the action bar. 
@@ -1044,7 +1045,7 @@ containing a value of this type.
         public static final int ic_launcher=0x7f02006f;
     }
     public static final class id {
-        public static final int LinearLayout1=0x7f040049;
+        public static final int LinearLayout1=0x7f04004b;
         public static final int SCROLLER_ID=0x7f040015;
         public static final int abs__action_bar=0x7f04002a;
         public static final int abs__action_bar_container=0x7f040029;
@@ -1091,35 +1092,37 @@ containing a value of this type.
         public static final int container=0x7f04003d;
         public static final int disableHome=0x7f040009;
         public static final int editText1=0x7f04003b;
-        public static final int editText2=0x7f040040;
-        public static final int editText3=0x7f040042;
-        public static final int editText4=0x7f040044;
-        public static final int editText5=0x7f040046;
+        public static final int editText2=0x7f040041;
+        public static final int editText3=0x7f040043;
+        public static final int editText4=0x7f040045;
+        public static final int editText5=0x7f040047;
         public static final int edit_query=0x7f04002f;
         public static final int fullscreen=0x7f040013;
-        public static final int fullscreen_content=0x7f04004a;
+        public static final int fullscreen_content=0x7f04004c;
         public static final int homeAsUp=0x7f040006;
         public static final int left=0x7f040010;
         public static final int listMode=0x7f040002;
         public static final int margin=0x7f040012;
         public static final int normal=0x7f040001;
-        public static final int refresh=0x7f04004c;
+        public static final int refresh=0x7f04004e;
         public static final int right=0x7f040011;
+        public static final int secondary_sliding_menu=0x7f04003f;
         public static final int selected_view=0x7f040014;
         public static final int showCustom=0x7f040008;
         public static final int showHome=0x7f040005;
         public static final int showTitle=0x7f040007;
         public static final int sliding_menu=0x7f04003e;
-        public static final int slidingmenu=0x7f040047;
-        public static final int slidingmenumain=0x7f040048;
+        public static final int slidingmenu=0x7f040048;
+        public static final int slidingmenu2=0x7f040049;
+        public static final int slidingmenumain=0x7f04004a;
         public static final int tabMode=0x7f040003;
         public static final int textView1=0x7f040016;
-        public static final int toggleButton2=0x7f04003f;
-        public static final int toggleButton3=0x7f040041;
-        public static final int toggleButton4=0x7f040043;
-        public static final int toggleButton5=0x7f040045;
+        public static final int toggleButton2=0x7f040040;
+        public static final int toggleButton3=0x7f040042;
+        public static final int toggleButton4=0x7f040044;
+        public static final int toggleButton5=0x7f040046;
         public static final int useLogo=0x7f040004;
-        public static final int webView1=0x7f04004b;
+        public static final int webView1=0x7f04004d;
         public static final int wrap_content=0x7f040000;
     }
     public static final class integer {
@@ -1155,12 +1158,14 @@ containing a value of this type.
         public static final int fragmentcontainer=0x7f03001a;
         public static final int helpcenter=0x7f03001b;
         public static final int navigation=0x7f03001c;
-        public static final int settings=0x7f03001d;
-        public static final int sherlock_spinner_dropdown_item=0x7f03001e;
-        public static final int sherlock_spinner_item=0x7f03001f;
-        public static final int slidingmenu=0x7f030020;
-        public static final int slidingmenumain=0x7f030021;
-        public static final int splash=0x7f030022;
+        public static final int secondary_navigator=0x7f03001d;
+        public static final int settings=0x7f03001e;
+        public static final int sherlock_spinner_dropdown_item=0x7f03001f;
+        public static final int sherlock_spinner_item=0x7f030020;
+        public static final int slidingmenu=0x7f030021;
+        public static final int slidingmenu2=0x7f030022;
+        public static final int slidingmenumain=0x7f030023;
+        public static final int splash=0x7f030024;
     }
     public static final class menu {
         public static final int abs_menu=0x7f0c0000;

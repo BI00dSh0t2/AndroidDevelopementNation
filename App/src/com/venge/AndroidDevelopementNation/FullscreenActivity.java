@@ -37,11 +37,13 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
         
         //Sliding Menu Customizations
         SlidingMenu menu = getSlidingMenu();
+        menu.setMode(SlidingMenu.LEFT_RIGHT);
         menu.setBehindOffsetRes(R.dimen.slideout);
         menu.setBackgroundColor(Color.BLACK);
         menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
         menu.setFadeEnabled(true);
         menu.setFadeDegree(0.5f);
+        menu.setSecondaryMenu(R.layout.slidingmenu2);
         setSlidingActionBarEnabled(false);
         
         

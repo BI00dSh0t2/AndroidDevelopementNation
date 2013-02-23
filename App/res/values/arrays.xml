@@ -8,5 +8,14 @@
         <item >Help Center</item>
         <item >Settings</item>
     </string-array>
+    <string-array name="secondary_menu">
+        <item >These</item>
+        <item >are</item>
+        <item >entries</item>
+        <item >for</item>
+        <item >the</item>
+        <item >second</item>
+        <item >menu</item>
+    </string-array>
     
 </resources>
