@@ -41,11 +41,5 @@ Brought To You By: VengeMobile Inc
             tools:ignore="HardcodedText" />
     </ScrollView>
 
-    <Button
-        android:id="@+id/backbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        tools:ignore="HardcodedText" />
 
 </LinearLayout>
