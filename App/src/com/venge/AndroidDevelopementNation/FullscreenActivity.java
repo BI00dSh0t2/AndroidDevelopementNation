@@ -89,6 +89,7 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
 			fg.addToBackStack(null);
 			fg.commit();
 			abs.setTitle("DevNation");
+			abs.setSubtitle(null);
 		}
 		else if (p3 == 1){
 			//devarea
@@ -97,7 +98,7 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
 			fg.replace(R.id.container, devarea);
 			fg.addToBackStack(null);
 			fg.commit();
-			abs.setTitle("Dev Area");
+			abs.setSubtitle("Dev Area");
 		}
 		else if (p3 == 2) {
 			//devtalk
@@ -106,7 +107,7 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
 			fg.replace(R.id.container, devtalk);
 			fg.addToBackStack(null);
 			fg.commit();
-			abs.setTitle("Dev Talk");
+			abs.setSubtitle("Dev Talk");
 			
 		}
 		else if (p3 == 3) {
@@ -116,7 +117,7 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
 			fg.replace(R.id.container,about);
 			fg.addToBackStack(null);
 			fg.commit();
-			abs.setTitle("About Us");
+			abs.setSubtitle("About Us");
 		}
 		else if (p3 == 4) {
 			//helpcenter 
@@ -125,7 +126,7 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
 			fg.replace(R.id.container,helpcenter); 
 			fg.addToBackStack(null);
 			fg.commit();
-			abs.setTitle("Help Center");
+			abs.setSubtitle("Help Center");
 		}
 		else if (p4 == 5) {
 			//settings 
@@ -134,7 +135,7 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
 			fg.replace(R.id.container,settings); 
 			fg.addToBackStack(null);
 			fg.commit();
-			abs.setTitle("Settings");
+			abs.setSubtitle("Settings");
 		}
 		menu.showContent();
 	}
