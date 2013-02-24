@@ -13,7 +13,7 @@ public class devtalk extends Fragment {
 	      Bundle savedInstanceState) {
 	    View view = inflater.inflate(R.layout.devtalk,
 	        container, false);
-	    view.setBackgroundColor(Color.DKGRAY);
+	    view.setBackgroundColor(Color.BLACK);
 		return view;
 	}
 }
