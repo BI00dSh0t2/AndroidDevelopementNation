@@ -1045,12 +1045,12 @@ containing a value of this type.
         public static int ic_launcher=0x7f02006f;
     }
     public static final class id {
-        public static int Android=0x7f040050;
-        public static int Developer=0x7f04004e;
-        public static int Guides=0x7f040051;
+        public static int Android=0x7f04004e;
+        public static int Developer=0x7f04004d;
+        public static int Guides=0x7f04004f;
         public static int LinearLayout1=0x7f04004b;
         public static int SCROLLER_ID=0x7f040016;
-        public static int Updates=0x7f040054;
+        public static int Updates=0x7f040051;
         public static int abs__action_bar=0x7f04002b;
         public static int abs__action_bar_container=0x7f04002a;
         public static int abs__action_bar_subtitle=0x7f04001a;
@@ -1108,10 +1108,8 @@ containing a value of this type.
         public static int margin=0x7f040012;
         public static int menu=0x7f040015;
         public static int normal=0x7f040001;
-        public static int refresh=0x7f040053;
+        public static int refresh=0x7f040050;
         public static int right=0x7f040011;
-        public static int scrollView1=0x7f040052;
-        public static int searchView1=0x7f04004d;
         public static int secondary_sliding_menu=0x7f04003f;
         public static int selected_view=0x7f040014;
         public static int showCustom=0x7f040008;
@@ -1128,7 +1126,6 @@ containing a value of this type.
         public static int toggleButton4=0x7f040044;
         public static int toggleButton5=0x7f040046;
         public static int useLogo=0x7f040004;
-        public static int webView1=0x7f04004f;
         public static int wrap_content=0x7f040000;
     }
     public static final class integer {
