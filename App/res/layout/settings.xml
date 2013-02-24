@@ -61,7 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:text="Push Notifications" />
+        android:text="Push Notifications (Coming Soon)" />
 
     <Button
         android:id="@+id/button1"

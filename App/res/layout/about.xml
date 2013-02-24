@@ -10,19 +10,20 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:fillViewport="true"
-        android:scrollbars="vertical" >
+        android:scrollbars="vertical" android:layout_weight="0.25">
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="match_parent"
-            android:layout_height="420dp"
+            android:layout_height="wrap_content"
             android:text="About Us:
         
   AndroidDevNation is a social app for developers who wants to be able to share there own project ideas and discuss latest creations on the go.
         
- Version: 1.0 Alpha
+ Version: 1.4.2 Pre Alpha build
         
-Developers Of DevNation:    
+Developers Of DevNation: 
+   
 -Julian Seaborn (Developer)
 -Joshua Dixon (Developer)
     
@@ -35,11 +36,21 @@ Hangout Room ( Talk to devs): https://web.groupme.com/groups/3471447
 Twitter: AndroidDevNation
 Facebook: Coming soon
     
-Brought To You By: VengeMobile Inc
- Inc     "
+Brought To You By: VengeMobile Studios
+      "
             android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="14sp"
+            android:textStyle="bold|normal"
+            android:typeface="normal"
             tools:ignore="HardcodedText" />
+
     </ScrollView>
 
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="126dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01"
+        android:text="Back" />
 
 </LinearLayout>

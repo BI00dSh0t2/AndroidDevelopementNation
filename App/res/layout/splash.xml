@@ -12,26 +12,88 @@
     <TextView
         android:id="@+id/fullscreen_content"
         android:layout_width="match_parent"
-        android:layout_height="244dp"
+        android:layout_height="111dp"
         android:gravity="center"
         android:keepScreenOn="true"
         android:text="AndroidDevNation"
         android:textColor="#33b1e5"
-        android:textSize="50sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
 
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="162dp"
+    <SearchView
+        android:id="@+id/searchView1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layerType="software"
-        android:text="Button" />
+        android:imeOptions="actionSearch"
+        android:inputType="textNoSuggestions"
+        android:orientation="horizontal"
+        android:visibility="visible" >
 
-    <WebView
-        android:id="@+id/webView1"
-        android:layout_width="465dp"
-        android:layout_height="match_parent" />
+    </SearchView>
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/Developer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="DevNews" >
+
+                    <WebView
+                        android:id="@+id/webView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                     >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Guides"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest package="com.venge.AndroidDevelopementNation"
     android:versionCode="1"
-    android:versionName="1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    android:versionName="1.0" xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto">
 
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="16" />
+    <supports-screens android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:anyDensity="true" android:smallScreens="true" android:xlargeScreens="true"/>
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="16" android:maxSdkVersion="17"/>
+    <compatible-screens></compatible-screens>
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.Sherlock" >
+        android:theme="@style/Theme.Sherlock" android:allowClearUserData="false" android:debuggable="false" android:permission="android.permission.INTERNET">
         <activity
             android:name="com.venge.AndroidDevelopementNation.FullscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

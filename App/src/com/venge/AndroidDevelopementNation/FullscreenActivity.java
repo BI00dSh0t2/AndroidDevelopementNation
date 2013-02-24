@@ -6,6 +6,7 @@ import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 import com.slidingmenu.lib.SlidingMenu;
 import com.slidingmenu.lib.app.SlidingFragmentActivity;
+
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -19,8 +20,8 @@ import android.widget.AdapterView;
 public class FullscreenActivity extends SlidingFragmentActivity implements AdapterView.OnItemClickListener
 {
 
-    private FragmentTransaction setTransition;
-	private AdapterView<?> p1;
+    public FragmentTransaction setTransition;
+	public AdapterView<?> p1;
 
 
 	@Override
@@ -67,6 +68,12 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
     }
     
     @Override
+	public void setSlidingActionBarEnabled(boolean b) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getSupportMenuInflater();
         inflater.inflate(R.menu.abs_menu, menu);
@@ -74,6 +81,7 @@ public class FullscreenActivity extends SlidingFragmentActivity implements Adapt
     }
     
     //On Slide Menu Click
+	@Override
 	public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4)
 	{
 		ActionBar abs = getSupportActionBar();

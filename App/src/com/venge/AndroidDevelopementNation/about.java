@@ -1,7 +1,5 @@
 package com.venge.AndroidDevelopementNation;
 
-import com.actionbarsherlock.app.ActionBar;
-
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,7 +22,6 @@ public class about extends Fragment {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
-	    
 	
 	    // TODO Auto-generated method stub
 	}
